@@ -1,0 +1,6 @@
+直接运行Test类即可
+主函数 
+	调用makeList方法产生要求的随机数List
+	调用arrayMap将List中的值以<Integer,int[]>方式保存
+	调用sortMap将map排序
+	调用show将3组信息按要求输出
