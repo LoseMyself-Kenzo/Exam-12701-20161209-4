@@ -53,14 +53,22 @@ public class Test {
 	//显示功能
 	public static void show(List<Integer> list,Map<Integer,int[]> map){
 		System.out.print("随机生成50个小于100的数，分别为：");
+		
 		Iterator<Integer> iter = list.iterator();  
         while(iter.hasNext()){
         	System.out.print(iter.next()+",");
         	}
+        System.out.println();
         
         StringBuilder str = new StringBuilder("Map中的数据为:{");
-        	
-        
+
+
+        	Iterator<Integer> it = map.keySet().iterator();
+        	while (it.hasNext()) {
+            	str.append(it.next()+"=>");
+        		str.append(map.get(it.next()));
+        		str.append("],");
+        	}
         System.out.println(str);
         }
 		
