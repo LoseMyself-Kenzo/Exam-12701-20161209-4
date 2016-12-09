@@ -66,7 +66,11 @@ public class Test {
         	Iterator<Integer> it = map.keySet().iterator();
         	while (it.hasNext()) {
             	str.append(it.next()+"=>");
-        		str.append(map.get(it.next()));
+            	int[] arry =map.get(it.next());
+            	str.append("[");
+            	for(int i=0; i<arry.length; ++i){
+            		str.append(arry[i]+",");
+            	}
         		str.append("],");
         	}
         System.out.println(str);
